@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* COMMON */
 .clear {
   clear: both;
 }
@@ -13,10 +14,72 @@
   color: white !important;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-third {
+  width: calc(100% / 3);
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 15px;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #ccc;
+}
+
+.pull-right {
+  float: right !important;
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* MAIN */
 #main {
 }
 
@@ -109,7 +172,7 @@ html {
   position: relative;
   padding-top: 50%;
   margin-top: 46px;
-  background: url("/assets/img/slider1.jpg") top center / cover no-repeat;
+  background: url('/assets/img/slider1.jpg') top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -137,7 +200,7 @@ html {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0;
+  padding: 64px 0 112px;
 }
 
 #content .section-heading {
@@ -166,12 +229,6 @@ html {
 
 #content .member-list {
   margin-top: 48px;
-}
-
-#content .member-item {
-  float: left;
-  width: calc(100% / 3);
-  text-align: center;
 }
 
 #content .member-name {
@@ -223,20 +280,11 @@ html {
 /* Places */
 .places-list {
   margin-top: 32px;
-  margin-left: -8px;
-  margin-right: -8px;
-  margin-bottom: 48px;
-}
-.place-item {
-  float: left;
-  width: calc(100% / 3);
-  padding: 0 8px;
 }
 .place-img {
   width: 100%;
   display: block;
 }
-
 .place-img:hover {
   opacity: 0.6;
 }
@@ -260,19 +308,74 @@ html {
   margin-top: 15px;
   line-height: 1.4;
 }
-.place-buy-btn {
-  color: white;
-  background-color: black;
-  text-decoration: none;
-  padding: 11px 16px;
-  display: inline-block;
-  margin-top: 15px;
+
+/* CONTACT FORM */
+
+.contact-content {
+  margin-top: 48px;
 }
 
-.place-buy-btn:hover {
-  color: black;
-  background-color: #ccc;
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact-info i[class*='ti-'] {
+  width: 30px;
+  display: inline-block;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form .form-submit-btn {
+  padding: 6px 12px;
+  border: 1px solid #000;
+  background: #000;
+  color: white;
+  border-radius: 4px;
+  float: right;
+}
+
+.map-section img {
+  width: 100%;
 }
 
 #footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .footer-list {
+  font-size: 24px;
+}
+
+#footer .footer-list a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #757575;
+}
+
+#footer .footer-list a:hover {
+  font-size: 24px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .copyright a {
+  font-size: 24px;
+  color: #757575;
+}
+
+#footer .copyright a:hover {
+  font-size: 24px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
 }
