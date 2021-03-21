@@ -23,6 +23,7 @@
   <!-- END BROWSER TAB ICON -->
 
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <link rel="stylesheet" href="./assets/fonts//themify-icons/themify-icons.css">
 </head>
 
@@ -35,7 +36,7 @@
         <li><a href="#tour">Tour</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a href="">
+          <a href="#">
             More
             <i class="nav-arrow-down ti-angle-down"></i>
           </a>
@@ -49,6 +50,10 @@
 
       <div class="search-button">
         <i class="search-icon ti-search"></i>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu-btn">
+        <i class="menu-icon ti-menu"></i>
       </div>
     </div>
 
@@ -207,8 +212,33 @@
       </div>
       <p class="copyright">Powered by <a href="">w3.css</a> </p>
     </div>
-
   </div>
+
+  <script>
+    var headerElement = document.getElementById('header');
+    var mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.onclick = function() {
+
+      // dong mo mobile-menu
+      var isClosed = headerElement.clientHeight === 46;
+      if (isClosed) {
+        headerElement.style.height = 'auto'
+      } else {
+        headerElement.style.height = null;
+      }
+
+    }
+
+    // tu dong dong menu khi click item
+    var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+    for (let index = 0; index < menuItems.length; index++) {
+      const menuItem = menuItems[index];
+      console.log(menuItem)
+      menuItem.onclick = function() {
+        headerElement.style.height = null;
+      }
+    }
+  </script>
 </body>
 
 </html>
