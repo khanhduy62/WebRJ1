@@ -6,13 +6,22 @@
 }
 /* Mobile */
 @media (max-width: 740px) {
-  #header {
-    /* height: auto; */
-  }
-  #header .search-button {
-    display: none;
+  #nav {
+    display: block;
   }
   #nav > li {
     display: block;
+  }
+
+  #nav > li:nth-child(1) {
+    display: inline-block;
+  }
+
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
+  #header .search-button {
+    display: none;
   }
 }
