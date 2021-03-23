@@ -6,22 +6,34 @@
 }
 /* Mobile */
 @media (max-width: 740px) {
+  #header {
+    overflow: hidden;
+  }
+  #header .mobile-menu-btn {
+    display: block;
+  }
+  #header .search-button {
+    display: none;
+  }
+
   #nav {
     display: block;
   }
   #nav > li {
     display: block;
   }
-
   #nav > li:nth-child(1) {
     display: inline-block;
   }
-
-  #header .mobile-menu-btn {
-    display: block;
+  #nav .subnav {
+    position: initial;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: lightgray;
+    background-color: #333;
   }
-
-  #header .search-button {
-    display: none;
+  #nav .subnav a {
+    color: #fff;
+    padding: 0 41px;
   }
 }

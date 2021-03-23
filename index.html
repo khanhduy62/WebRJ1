@@ -217,7 +217,7 @@
   <script>
     var headerElement = document.getElementById('header');
     var mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.onclick = function() {
+    mobileMenu.onclick = function () {
 
       // dong mo mobile-menu
       var isClosed = headerElement.clientHeight === 46;
@@ -233,9 +233,15 @@
     var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
     for (let index = 0; index < menuItems.length; index++) {
       const menuItem = menuItems[index];
-      console.log(menuItem)
-      menuItem.onclick = function() {
-        headerElement.style.height = null;
+      console.log(menuItem.nextElementSibling?.classList)
+      menuItem.onclick = function (event) {
+        const isParentMenu = this.nextElementSibling && menuItem.nextElementSibling?.classList.contains('subnav')
+
+        if (isParentMenu) {
+          event.preventDefault();
+        } else {
+          headerElement.style.height = null;
+        }
       }
     }
   </script>
