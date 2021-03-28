@@ -6,8 +6,13 @@
 }
 /* Mobile */
 @media (max-width: 740px) {
-  .s-col-full {
+  .s-full-width {
     width: 100%;
+  }
+
+  .s-btn {
+    width: 100%;
+    text-align: center;
   }
 
   #header {
@@ -44,5 +49,9 @@
   #content .member-item {
     margin-top: 30px;
     width: 100%;
+  }
+
+  #contact .contact-form {
+    margin-top: 16px;
   }
 }
