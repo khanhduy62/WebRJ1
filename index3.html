@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal</title>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=ARqCjiY7s_f1KrKEIf9T2fUE1Yu1PMlTmMjtjJAqPUk1R-Ky6Y31tYbdaTsxWda1kCzALyLGyi5mUTbY&locale=en_US"></script>
+</head>
+
+<body>
+    <div id="paypal-button-container"> </div>
+
+    <script>
+        paypal.Buttons({
+            createOrder: function (data, actions) {
+                // Set up the transaction
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '0.01'
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                alert('You have successfully created subscription ' + data.subscriptionID);
+            },
+             onCancel: function (data) {
+                alert('cancel')
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+
+</html>

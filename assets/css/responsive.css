@@ -56,12 +56,11 @@
     padding: 0 41px;
   }
 
-  #content .member-item {
-    margin-top: 30px;
+  .s-col-full {
     width: 100%;
   }
 
-  #contact .contact-form {
-    margin-top: 16px;
+  .s-full-width {
+    width: 100%;
   }
 }
